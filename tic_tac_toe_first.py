@@ -60,9 +60,9 @@ def gather_empty_cells(board):
     empty_list = []
     index = 0
     for state in board:
-        if state = 'e': #=が1個足りない
-        empty_list.append(index) #インデントがタブ1個分ズレてる
-        index += 1 #同じ
+    if state = 'e': #=が1個足りない,タブが1個分ズレてる
+    empty_list.append(index) #インデントがタブ2個分ズレてる
+    index += 1 #2個分ズレてる
 
     return empty_list
 
