@@ -37,7 +37,7 @@ def print_board(board):
     for state in board:
         count += 1
         if count % 3 == 0:
-            print('{0}'.format(state))
+            pront('{0}'.format(state))
         else:
             print('{0}'.format(state), end='')
 
