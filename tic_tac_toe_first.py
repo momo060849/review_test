@@ -33,10 +33,10 @@ def print_board(board):
     eee
     ---
     """
-    n = 0
+    count = 0 # 変数名を"n"から"count"に変更しました
     for state in board:
-        n += 1
-        if n % 3 == 0:
+        count += 1
+        if count % 3 == 0:
             print('{0}'.format(state))
         else:
             print('{0}'.format(state), end='')
@@ -91,13 +91,13 @@ def point_random(board, player):
 
 def test_play():
     board = init_board()
-    print '# board was initialized.'
+    print('# board was initialized.') #print関数を3系に書き直しました
     print_board(board)
 
     index = point_random(board, 'o')
-    print "# user 'o' pointed to board[{0}]".format(index)
+    print("# user 'o' pointed to board[{0}]".format(index))
     print_board(board)
 
     index = point_random(board, 'x')
-    print "# user 'x' pointed to board[{0}]".format(index)
+    print("# user 'x' pointed to board[{0}]".format(index))
     print_board(board)
