@@ -1,3 +1,36 @@
+"""Example code for Tic-tac-toe
+3x3 board was described as a list with 9 sequential items.
+Each item in the list shows as follows.
+ - 'e': empty
+ - 'o': circle
+ - 'x': cross
+For example,
+    board = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
+shows that all cells have empty state.
+The index of board[] begins from upper-left to lower-right.
+For example,
+    board = ['e', 'o', 'e', 'e', 'o', 'x', 'e', 'e', 'e']
+describes the state of following.
+    'e'|'o'|'e'
+    ---+---+---
+    'e'|'o'|'x'
+    ---+---+---
+    'e'|'e'|'e'
+Example:
+    This module has a test_play(), which executes
+        1. prepare an empty board,
+        2. play one hand with `o' randomly,
+        2. play one hand with `c' randomly.
+    case 1:
+        % python
+        > import tic_tac_toe
+        > tic_tac_toe.test_play()
+    case 2:
+        % python
+        > from tic_tac_toe import *
+        > test_play()
+"""
+
 import random
 
 
@@ -33,11 +66,11 @@ def print_board(board):
     eee
     ---
     """
-    count = 0 # 変数名を"n"から"count"に変更しました
+    count = 0
     for state in board:
         count += 1
         if count % 3 == 0:
-            pront('{0}'.format(state)) #誤字
+            print('{0}'.format(state))
         else:
             print('{0}'.format(state), end='')
 
@@ -60,9 +93,9 @@ def gather_empty_cells(board):
     empty_list = []
     index = 0
     for state in board:
-    if state = 'e': #=が1個足りない,タブが1個分ズレてる
-    empty_list.append(index) #インデントがタブ2個分ズレてる
-    index += 1 #2個分ズレてる
+        if state == 'e':
+            empty_list.append(index)
+        index += 1
 
     return empty_list
 
@@ -91,7 +124,7 @@ def point_random(board, player):
 
 def test_play():
     board = init_board()
-    print('# board was initialized.') #print関数を3系に書き直しました
+    print('# board was initialized.')
     print_board(board)
 
     index = point_random(board, 'o')
