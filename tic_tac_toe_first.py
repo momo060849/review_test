@@ -37,7 +37,7 @@ def print_board(board):
     for state in board:
         count += 1
         if count % 3 == 0:
-            pront('{0}'.format(state))
+            pront('{0}'.format(state)) #誤字
         else:
             print('{0}'.format(state), end='')
 
@@ -60,7 +60,7 @@ def gather_empty_cells(board):
     empty_list = []
     index = 0
     for state in board:
-        if state == 'e':
+        if state = 'e': #=が1個足りない
             empty_list.append(index)
         index += 1
 
