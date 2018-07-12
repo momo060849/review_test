@@ -61,8 +61,8 @@ def gather_empty_cells(board):
     index = 0
     for state in board:
         if state = 'e': #=が1個足りない
-            empty_list.append(index)
-            index += 1 #インデントがタブ1個分ズレてる
+        empty_list.append(index) #インデントがタブ1個分ズレてる
+        index += 1 #同じ
 
     return empty_list
 
